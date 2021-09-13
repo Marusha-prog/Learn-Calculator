@@ -82,11 +82,15 @@ function flushOperation(intBuffer){
     else if(previousOperator === "×"){
         runningTotal *= intBuffer;
     }
-    else{
+    else if(previousOperator === "÷"){
         runningTotal /= intBuffer;
+    }
+    else{
+        console.log(error);
     }
 }
 
 function rerender(){
     screen.innerText = buffer;
 }
+/*done*/
